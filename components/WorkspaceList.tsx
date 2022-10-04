@@ -50,12 +50,12 @@ const WorkspaceList = () => {
 
   return (
     <Wrapper {...getRootProps()}>
-      <input {...getInputProps()} />
-      {isDragActive ? (
-        <p>Drop files here...</p>
-      ) : (
-        <p>Feel free to drag files here</p>
-      )}
+      {/*<input {...getInputProps()} />*/}
+      {/*{isDragActive ? (*/}
+      {/*  <p>Drop files here...</p>*/}
+      {/*) : (*/}
+      {/*  <p>Feel free to drag files here</p>*/}
+      {/*)}*/}
       {workspaces?.map((workspace) => (
         <li key={workspace.id}>
           <Link href={`workspaces/${workspace.id}`}>
