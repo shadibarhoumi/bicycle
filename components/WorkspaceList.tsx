@@ -10,7 +10,6 @@ import Workspace from '@models/Workspace'
 import Link from 'next/link'
 import styled, { useTheme } from 'styled-components'
 import UnstyledButton from '@components/UnstyledButton'
-import { useDropzone } from 'react-dropzone'
 
 const WorkspaceList = () => {
   const user = useContext(UserContext)
@@ -24,38 +23,13 @@ const WorkspaceList = () => {
   })
   const theme = useTheme()
 
-  const onDrop = React.useCallback(async (acceptedFiles) => {
-    // Do something with the files
-    // const res = await fetch('http://localhost:3001')
-    const res = await fetch('http://localhost:3001/convert', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-      },
-      body: 'hi',
-    })
-    const parsed = await res.json()
-    console.log({ parsed })
-  }, [])
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
-    onDrop,
-    noClick: true,
-  })
-
   if (loading)
     return (
       <ListLoader style={{ maxWidth: '500px' }} uniqueKey="workspaceLoader" />
     )
 
   return (
-    <Wrapper {...getRootProps()}>
-      {/*<input {...getInputProps()} />*/}
-      {/*{isDragActive ? (*/}
-      {/*  <p>Drop files here...</p>*/}
-      {/*) : (*/}
-      {/*  <p>Feel free to drag files here</p>*/}
-      {/*)}*/}
+    <Wrapper>
       {workspaces?.map((workspace) => (
         <li key={workspace.id}>
           <Link href={`workspaces/${workspace.id}`}>
