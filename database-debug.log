@@ -1,0 +1,7 @@
+13:10:00.423 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+13:10:00.552 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+13:19:42.171 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
+13:19:42.178 [NamespaceSystem-akka.actor.default-dispatcher-11] INFO com.firebase.core.namespace.Terminator$Terminator - 1 actors left to terminate: jerky-dev
+13:19:42.183 [NamespaceSystem-akka.actor.default-dispatcher-12] INFO com.firebase.core.namespace.NamespaceActor - Stopping namespace actor for jerky-dev
+13:19:42.184 [NamespaceSystem-akka.actor.default-dispatcher-12] INFO com.firebase.core.namespace.NamespaceActor - Gauges removed for jerky-dev
+13:19:42.188 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.
